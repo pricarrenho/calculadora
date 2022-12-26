@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { buttons } from "./buttonsArray";
+import "./App.css";
+import { useApp } from "./useApp";
 
 function App() {
+  const { handleOperator, makeDisplay } = useApp();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="calculate">
+      <div className="content">
+        <div className="result">{makeDisplay}</div>
+
+        <div className="row">
+          {buttons.map((button) => {
+            return (
+              <button
+                className={button.class}
+                onClick={() => handleOperator(button.name)}
+                type="button"
+              >
+                {button.name}
+              </button>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }
