@@ -14,6 +14,7 @@ function App() {
           {buttons.map((button) => {
             return (
               <button
+                key={button.name}
                 className={button.class}
                 onClick={() => handleOperator(button.name)}
                 type="button"

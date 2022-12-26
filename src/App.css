@@ -1,10 +1,20 @@
-.calculate {
-  height: 100vh;
-  width: 100v;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+* {
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  margin: 0;
+  padding: 0;
   background: #ffe;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.calculate {
+  padding: 2rem;
+  margin: auto;
 }
 
 .content {
@@ -12,13 +22,14 @@
   background: #ac073e;
   padding: 1rem;
   border-radius: 0.5rem;
+  width: 332px;
   box-shadow: 4px 4px 8px rgb(48, 45, 45);
 }
 
 .content .result {
   background: #fff;
-  width: 17.5rem;
-  height: 2.5rem;
+  width: 100%;
+  height: 3.2rem;
   border: 1px solid #000;
   box-shadow: 1px 1px 1px #000;
   border-radius: 0.2rem;
@@ -42,6 +53,7 @@
 
 .row button {
   min-height: 60px;
+  min-width: 60px;
   margin: 0.2rem;
   box-shadow: 1px 1px 1px #000;
   border-radius: 0.4rem;
